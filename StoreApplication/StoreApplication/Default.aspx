@@ -68,6 +68,7 @@
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Shop with US</h1>
                     <p class="lead fw-normal text-white-50 mb-0">always</p>
+                    <p class="lead fw-normal text-white-50 mb-0">with you</p>
                 </div>
             </div>
         </header>
