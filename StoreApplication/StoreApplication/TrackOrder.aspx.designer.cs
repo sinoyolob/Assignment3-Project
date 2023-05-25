@@ -11,7 +11,7 @@ namespace StoreApplication
 {
 
 
-    public partial class AdminDash
+    public partial class TrackOrder
     {
 
         /// <summary>
@@ -24,22 +24,13 @@ namespace StoreApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// UserAccounts control.
+        /// Logouta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UserAccounts;
-
-        /// <summary>
-        /// LogOutAdmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogOutAdmin;
+        protected global::System.Web.UI.WebControls.LinkButton Logouta;
 
         /// <summary>
         /// Help control.

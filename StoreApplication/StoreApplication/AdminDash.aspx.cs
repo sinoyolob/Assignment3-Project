@@ -13,5 +13,15 @@ namespace StoreApplication
         {
 
         }
+
+        protected void UserAccounts_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("AdminUsers.aspx");
+        }
+
+        protected void LogOutAdmin_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Default.aspx");
+        }
     }
 }

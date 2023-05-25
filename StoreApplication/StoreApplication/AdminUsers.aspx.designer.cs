@@ -11,7 +11,7 @@ namespace StoreApplication
 {
 
 
-    public partial class AdminDash
+    public partial class AdminUsers
     {
 
         /// <summary>

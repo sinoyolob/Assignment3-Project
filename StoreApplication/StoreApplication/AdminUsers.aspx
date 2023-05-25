@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminDash.aspx.cs" Inherits="StoreApplication.AdminDash" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUsers.aspx.cs" Inherits="StoreApplication.AdminUsers" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,7 @@
          <%--Botstrap theme for randoms--%>
          <link href="bootstrap.css" rel="stylesheet" />
 </head>
-    <body>
+<body>
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,10 +28,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item">
-                <asp:LinkButton CssClass="nav-link active" ID="UserAccounts" runat="server" OnClick="UserAccounts_Click">User Accounts</asp:LinkButton>
+                             <asp:LinkButton CssClass="nav-link active" ID="UserAccounts" runat="server" >User Accounts</asp:LinkButton>
                             </li>
                         <li class="nav-item">
-                    <asp:LinkButton CssClass="nav-link active" ID="LogOutAdmin" runat="server" PostBackUrl="~/Default.aspx" OnClick="LogOutAdmin_Click">Log Out</asp:LinkButton>
+                                 <asp:LinkButton CssClass="nav-link active" ID="LogOutAdmin" runat="server" PostBackUrl="~/Default.aspx">Log Out</asp:LinkButton>
                             </li>
                         <li class="nav-item">
                              <asp:LinkButton CssClass="nav-link active" ID="Help" runat="server">Help</asp:LinkButton>
@@ -61,16 +61,16 @@
             <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">New Accounts</h1>
+                    <h1 class="display-4 fw-bolder">All Accounts</h1>
                    
                 </div>
+                <div>
+            <div class="container px-4 px-lg-5 mt-5">
+               <p class="lead fw-normal text-black mb-0">Display a table with all user accounts active and inactive </p>
+                </div>
+        </div>
             </div>
         </header>
-        </div>
-        <div>
-            <div class="container px-4 px-lg-5 mt-5">
-               <p class="lead fw-normal text-black mb-0">Display a table with Inactive user accounts </p>
-                </div>
         </div>
     </form>
      <footer class="py-5 bg-dark">
