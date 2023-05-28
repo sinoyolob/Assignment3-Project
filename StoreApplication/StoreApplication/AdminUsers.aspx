@@ -28,7 +28,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="UserAccounts" runat="server" >User Accounts</asp:LinkButton>
+                             <asp:LinkButton CssClass="nav-link active" ID="UserAccounts" runat="server" >Customer Accounts</asp:LinkButton>
+                            </li>
+                         <li class="nav-item">
+                             <asp:LinkButton CssClass="nav-link active" ID="LinkButton1" runat="server" >Sales Employee Accounts</asp:LinkButton>
                             </li>
                         <li class="nav-item">
                                  <asp:LinkButton CssClass="nav-link active" ID="LogOutAdmin" runat="server" PostBackUrl="~/Default.aspx">Log Out</asp:LinkButton>
