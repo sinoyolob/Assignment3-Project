@@ -17,6 +17,10 @@
         <link href="css/styles.css" rel="stylesheet" />
          <%--Botstrap theme for randoms--%>
          <link href="bootstrap.css" rel="stylesheet" />
+            <%--DataTable--%>
+         <link href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css" rel="stylesheet" />
+    
+
 </head>
     <body>
     <form id="form1" runat="server">
@@ -39,32 +43,15 @@
                         <li class="nav-item">
                              <asp:LinkButton CssClass="nav-link active" ID="Help" runat="server">Help</asp:LinkButton>
                             </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop List</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="AllProducts" runat="server">All Products</asp:LinkButton>
-                            </li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="NewArrivals" runat="server">New Arrivals</asp:LinkButton>
-                            </li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="PhasingOut" runat="server">Phasing Out</asp:LinkButton>
-                            </li>
-                                
-                            </ul>
-                        </li>
                     </ul>
                  
                 </div>
             </div>
         </nav>
-            <header class="bg-dark py-5">
+            <header class="py-5 bg-dark" >
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">New Accounts</h1>
+                    <h1 class="display-4 fw-bolder">Admin Dashboard</h1>
                    
                 </div>
             </div>
@@ -74,6 +61,16 @@
             <div class="container px-4 px-lg-5 mt-5">
                <p class="lead fw-normal text-black mb-0">Display a table with Inactive user accounts </p>
                 </div>
+            <div id="allUsersdiv" runat="server">
+            <asp:GridView ID="AllUsers" runat="server"></asp:GridView>
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1"></asp:SqlDataSource>
+                </div>
+             <div id="customers" runat="server">
+                 <asp:GridView ID="CustomerAcc" runat="server"></asp:GridView>
+            </div>
+            <div id="unactiveAcc" runat="server">
+                <asp:GridView ID="unactiveAccounts" runat="server"></asp:GridView>
+            </div>
         </div>
     </form>
      <footer class="py-5 bg-dark">
@@ -83,5 +80,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+       <%-- DataTable--%>
+        <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
 </body>
 </html>

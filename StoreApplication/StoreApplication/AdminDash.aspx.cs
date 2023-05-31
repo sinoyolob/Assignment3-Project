@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace StoreApplication
 {
@@ -11,9 +14,10 @@ namespace StoreApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           alluser
         }
 
+       
         protected void UserAccounts_Click(object sender, EventArgs e)
         {
             Server.Transfer("AdminUsers.aspx");

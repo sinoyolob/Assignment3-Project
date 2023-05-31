@@ -67,6 +67,10 @@
         <div>
             <p>List of products dataTable plug in</p>
         </div>
+        <div>
+            <asp:GridView ID="AllProductsbySupplier" runat="server"></asp:GridView>
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1"></asp:SqlDataSource>
+        </div>
     </form>
           <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Sithi Store created by Sinoyolo and Lithi</p></div>

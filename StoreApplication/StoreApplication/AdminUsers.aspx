@@ -39,21 +39,7 @@
                         <li class="nav-item">
                              <asp:LinkButton CssClass="nav-link active" ID="Help" runat="server">Help</asp:LinkButton>
                             </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop List</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="AllProducts" runat="server">All Products</asp:LinkButton>
-                            </li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="NewArrivals" runat="server">New Arrivals</asp:LinkButton>
-                            </li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li class="dropdown-item">
-                             <asp:LinkButton CssClass="nav-link active" ID="PhasingOut" runat="server">Phasing Out</asp:LinkButton>
-                            </li>
-                                
+                       
                             </ul>
                         </li>
                     </ul>

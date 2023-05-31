@@ -33,25 +33,24 @@ namespace StoreApplication
             string connectionString = "MyConn";
             using (SqlConnection connection = new SqlConnection(connectionString));
             {
-                SqlCommmand command = new SqlCommand("spUserAccount", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                //SqlCommmand command = new SqlCommand("spUserAccount", connection);
+                //command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-                command.Parameters.AddWithValue("@surname", surname);
-                command.Parameters.AddWithValue("@firstname", firstname);
-                command.Parameters.AddWithValue("@usertype", usertype);
-                command.Parameters.AddWithValue("@active", active);
+                //command.Parameters.AddWithValue("@username", username);
+                //command.Parameters.AddWithValue("@password", password);
+                //command.Parameters.AddWithValue("@surname", surname);
+                //command.Parameters.AddWithValue("@firstname", firstname);
+                //command.Parameters.AddWithValue("@usertype", usertype);
+                //command.Parameters.AddWithValue("@active", active);
 
      
-                connection.Open();
+                //connection.Open();
 
-                command.ExecuteNonQuery();
-                noti.Visible = true;
+                //command.ExecuteNonQuery();
+                //noti.Visible = true;
 
 
                 }
             }
         }
     }
-}
