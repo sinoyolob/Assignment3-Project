@@ -71,7 +71,14 @@
                 </div>
             </div>
         </header>
-   
+        <br /><br />
+   <div>
+      <%-- Notification--%>
+       <div id="noti" class="alert alert-primary" role="alert" runat="server">
+           Account created successfully
+       </div>
+   </div>
+
         <div>
            <%-- Page Content--%>
             <div class="container px-4 px-lg-5 mt-5">
@@ -105,7 +112,7 @@
                 <div class="form-group">
                      <asp:Button CssClass="btn btn-danger" ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
                     &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                    <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Submit" />
+                    <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
                 </div>
 
 
