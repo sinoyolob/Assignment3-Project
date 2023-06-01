@@ -59,17 +59,69 @@
         </div>
         <div>
             <div class="container px-4 px-lg-5 mt-5">
-               <p class="lead fw-normal text-black mb-0">Display a table with Inactive user accounts </p>
+               <p class="lead fw-normal text-black mb-0">Search for user accounts </p>
                 </div>
+            <div>
+               <div class="form-inline">
+                   <asp:Label ID="Label1" cssclass="my-1 mr-2" runat="server" Text="Search group"></asp:Label>
+                   <asp:DropDownList ID="DropDownList1" CssClass="custom-select my-1 mr-sm-2" runat="server">
+                       <asp:ListItem>All users</asp:ListItem>
+                       <asp:ListItem>Customer Accounts</asp:ListItem>
+                       <asp:ListItem>InACTIVE Customers</asp:ListItem>
+                   </asp:DropDownList>
+                   <asp:Button ID="Button1" CssClass="btn btn-primary my-1" runat="server" Text="Search" OnClick="Button1_Click" />
+               </div>
+            </div>
             <div id="allUsersdiv" runat="server">
-            <asp:GridView ID="AllUsers" runat="server"></asp:GridView>
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1"></asp:SqlDataSource>
+                <asp:GridView ID="AllUsers" runat="server" DataSourceID="SqlDataSource1" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="userId">
+                    <Columns>
+                        <asp:BoundField DataField="userId" HeaderText="userId" ReadOnly="True" InsertVisible="False" SortExpression="userId"></asp:BoundField>
+                        <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName"></asp:BoundField>
+                        <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname"></asp:BoundField>
+                        <asp:BoundField DataField="firstName" HeaderText="firstName" SortExpression="firstName"></asp:BoundField>
+                        <asp:BoundField DataField="userType" HeaderText="userType" SortExpression="userType"></asp:BoundField>
+                        <asp:BoundField DataField="active" HeaderText="active" SortExpression="active"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:SalesSubConnectionString %>" SelectCommand="SELECT [userId], [userName], [surname], [firstName], [userType], [active] FROM [UserTbl] WHERE (([userType] = @userType) AND ([active] = @active))">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="Customer" Name="userType" Type="String"></asp:Parameter>
+                        <asp:Parameter DefaultValue="No" Name="active" Type="String"></asp:Parameter>
+                    </SelectParameters>
+                </asp:SqlDataSource>
                 </div>
              <div id="customers" runat="server">
-                 <asp:GridView ID="CustomerAcc" runat="server"></asp:GridView>
-            </div>
+                 <asp:GridView ID="CustomerAcc" runat="server" DataSourceID="SqlDataSource3" AutoGenerateColumns="False" DataKeyNames="userId" AllowPaging="True">
+                     <Columns>
+                         <asp:BoundField DataField="userId" HeaderText="userId" ReadOnly="True" InsertVisible="False" SortExpression="userId"></asp:BoundField>
+                         <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName"></asp:BoundField>
+                         <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname"></asp:BoundField>
+                         <asp:BoundField DataField="firstName" HeaderText="firstName" SortExpression="firstName"></asp:BoundField>
+                         <asp:BoundField DataField="userType" HeaderText="userType" SortExpression="userType"></asp:BoundField>
+                         <asp:BoundField DataField="active" HeaderText="active" SortExpression="active"></asp:BoundField>
+                     </Columns>
+                 </asp:GridView>
+                 <asp:SqlDataSource runat="server" ID="SqlDataSource3" ConnectionString='<%$ ConnectionStrings:SalesSubConnectionString %>' SelectCommand="SELECT [userId], [userName], [surname], [firstName], [userType], [active] FROM [UserTbl] WHERE ([userType] = @userType)">
+                     <SelectParameters>
+                         <asp:Parameter DefaultValue="Customer" Name="userType" Type="String"></asp:Parameter>
+                     </SelectParameters>
+                 </asp:SqlDataSource>
+             </div>
             <div id="unactiveAcc" runat="server">
-                <asp:GridView ID="unactiveAccounts" runat="server"></asp:GridView>
+                <asp:GridView ID="unactiveAccounts" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" DataKeyNames="userId">
+                    <Columns>
+                        <asp:BoundField DataField="userId" HeaderText="userId" ReadOnly="True" InsertVisible="False" SortExpression="userId"></asp:BoundField>
+                        <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName"></asp:BoundField>
+                        <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname"></asp:BoundField>
+                        <asp:BoundField DataField="userType" HeaderText="userType" SortExpression="userType"></asp:BoundField>
+                        <asp:BoundField DataField="active" HeaderText="active" SortExpression="active"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:SalesSubConnectionString %>' SelectCommand="SELECT [userId], [userName], [surname], [userType], [active] FROM [UserTbl] WHERE ([active] = @active)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="No" Name="active" Type="String"></asp:Parameter>
+                    </SelectParameters>
+                </asp:SqlDataSource>
             </div>
         </div>
     </form>

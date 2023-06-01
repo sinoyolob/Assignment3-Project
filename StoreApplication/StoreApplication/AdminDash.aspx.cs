@@ -14,7 +14,10 @@ namespace StoreApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           alluser
+            AllUsers.Visible= true;
+            CustomerAcc.Visible = false;
+            unactiveAccounts.Visible = false;
+
         }
 
        
@@ -26,6 +29,29 @@ namespace StoreApplication
         protected void LogOutAdmin_Click(object sender, EventArgs e)
         {
             Server.Transfer("Default.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedItem.Text == "All users")
+            {
+                AllUsers.Visible = true;
+                CustomerAcc.Visible = false;
+                unactiveAccounts.Visible = false;
+            }
+            else if (DropDownList1.SelectedItem.Text == "Customer Accounts")
+
+            {
+                AllUsers.Visible = false;
+                CustomerAcc.Visible = true;
+                unactiveAccounts.Visible = false;
+            }
+            else if (DropDownList1.SelectedItem.Text == "InACTIVE Customers")
+            {
+                AllUsers.Visible = false;
+                CustomerAcc.Visible = false;
+                unactiveAccounts.Visible = true;
+            }
         }
     }
 }
