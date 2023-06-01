@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace StoreApplication
 {
@@ -30,27 +31,36 @@ namespace StoreApplication
             string usertype = "Customer";
             string active = "No";
 
-            string connectionString = "MyConn";
-            using (SqlConnection connection = new SqlConnection(connectionString));
+            try
             {
-                //SqlCommmand command = new SqlCommand("spUserAccount", connection);
-                //command.CommandType = CommandType.StoredProcedure;
+                string connectionString = ConfigurationManager.ConnectionStrings["SalesSubConnectionString"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand("spUserAccount", connection);
+                    command.CommandType = CommandType.StoredProcedure;
 
-                //command.Parameters.AddWithValue("@username", username);
-                //command.Parameters.AddWithValue("@password", password);
-                //command.Parameters.AddWithValue("@surname", surname);
-                //command.Parameters.AddWithValue("@firstname", firstname);
-                //command.Parameters.AddWithValue("@usertype", usertype);
-                //command.Parameters.AddWithValue("@active", active);
-
-     
-                //connection.Open();
-
-                //command.ExecuteNonQuery();
-                //noti.Visible = true;
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@surname", surname);
+                    command.Parameters.AddWithValue("@firstname", firstname);
+                    command.Parameters.AddWithValue("@usertype", usertype);
+                    command.Parameters.AddWithValue("@active", active);
 
 
+                    connection.Open();
+
+                    command.ExecuteNonQuery();
                 }
+                noti.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that may occur
+                lblMessage.Text = "An error occurred while adding the customer account: " + ex.Message;
+                lblMessage.Visible = true;
             }
         }
-    }
+            }
+        }
+    

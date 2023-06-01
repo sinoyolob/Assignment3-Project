@@ -77,6 +77,7 @@
        <div id="noti" class="alert alert-primary" role="alert" runat="server">
            Account created successfully
        </div>
+       <asp:Label ID="lblMessage" runat="server" Text=" "></asp:Label>
    </div>
 
         <div>
