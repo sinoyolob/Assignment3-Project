@@ -41,8 +41,7 @@
                             </li>
                        
                             </ul>
-                        </li>
-                    </ul>
+                       
                  
                 </div>
             </div>
@@ -55,8 +54,21 @@
                 </div>
                 <div>
             <div class="container px-4 px-lg-5 mt-5">
-               <p class="lead fw-normal text-black mb-0">Display a table with all user accounts active and inactive </p>
+               <p class="lead fw-normal text-black mb-0">Update User Accounts </p>
                 </div>
+            <div class="container px-4 px-lg-5 mt-5">
+                <asp:DropDownList ID="userID" runat="server" DataSourceID="SqlDataSource1" DataTextField="userId" DataValueField="userId"></asp:DropDownList>
+
+                <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:SalesSubConnectionString %>' SelectCommand="SELECT [userId] FROM [UserTbl] WHERE ([active] = @active)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="No" Name="active" Type="String"></asp:Parameter>
+                    </SelectParameters>
+                </asp:SqlDataSource>
+
+                <asp:Button ID="btuUpdate" CssClass="btn btn-warning" runat="server" Text="Update" OnClick="btuUpdate_Click" />
+
+                <asp:Label ID="lblMessage" runat="server" Text="Label"></asp:Label>
+            </div>
         </div>
             </div>
         </header>
