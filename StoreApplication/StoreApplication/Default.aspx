@@ -108,13 +108,13 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Product 2</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <%--<div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                    </div>
+                                    </div>--%>
                                     <!-- Product price-->
                                     <span>R0.00</span>
                                     
@@ -159,13 +159,13 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Product 4</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <%--<div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                    </div>
+                                    </div>--%>
                                     <!-- Product price-->
                                     R0.00
                                 </div>
@@ -188,8 +188,8 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Product 5</h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R0.00</span>
-                                    $25.00
+                                    
+                                    R0.00
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -230,15 +230,15 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">Product 7</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <%--<div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                    </div>
+                                    </div>--%>
                                     <!-- Product price-->
-                                    <span>R.00</span>
+                                    <span>R0.00</span>
                                    
                                 </div>
                             </div>
@@ -257,15 +257,15 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Product 8/h5>
+                                    <h5 class="fw-bolder">Product 8</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <%--<div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                    </div>
+                                    </div>--%>
                                     <!-- Product price-->
                                     R0.00
                                 </div>

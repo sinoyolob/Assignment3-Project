@@ -81,7 +81,7 @@
                  </div>
                 <div class="form-group">
                     <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-                    <asp:TextBox CssClass="form-control" ID="TextBox2" placeholder="*********" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="TextBox2" placeholder="*********" runat="server" TextMode="Password"></asp:TextBox>
                  </div>
                   <div class="form-group">
                      <asp:Button CssClass="btn btn-danger" ID="Button2" runat="server" Text="Cancel"  />

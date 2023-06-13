@@ -103,11 +103,11 @@
                 <br />
                  <div class="form-group">
                     <asp:Label ID="Label5" runat="server" Text="Password"></asp:Label>
-                    <asp:TextBox CssClass="form-control" ID="TextBox5" placeholder="**********" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="TextBox5" placeholder="**********" runat="server" TextMode="Password"></asp:TextBox>
                  </div>
                 <div class="form-group">
                     <asp:Label ID="Label6" runat="server" Text="Confirm Password"></asp:Label>
-                    <asp:TextBox CssClass="form-control" ID="TextBox6" placeholder="**********" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control" ID="TextBox6" placeholder="**********" runat="server" TextMode="Password"></asp:TextBox>
                  </div>
 
                 <div class="form-group">
